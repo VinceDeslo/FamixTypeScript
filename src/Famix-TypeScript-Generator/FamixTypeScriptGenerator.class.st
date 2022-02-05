@@ -181,7 +181,8 @@ FamixTypeScriptGenerator >> defineClasses [
 	parameterizedType := builder newClassNamed: #ParameterizedType.
 	structuralEntity := builder newClassNamed: #StructuralEntity.
 	leafEntity := builder newClassNamed: #LeafEntity.
-	
+	annotationType := builder newClassNamed: #AnnotationType.
+	annotationInstance := builder newClassNamed: #AnnotationInstance.
 	localVariable := builder newClassNamed: #LocalVariable.
 	attribute := builder newClassNamed: #Attribute.
 	inheritance := builder newClassNamed: #Inheritance.
@@ -311,6 +312,16 @@ FamixTypeScriptGenerator >> defineHierarchy [
 	function --|> #TDefinedInModule.
 
 	inheritance --|> #TInheritance.
+	
+	annotationInstance --|> sourcedEntity.
+	annotationInstance --|> #TAnnotationInstance.
+	annotationInstance --|> #TWithAnnotationInstanceAttributes.
+	annotationInstance --|> #TTypedAnnotationInstance.
+	
+	annotationType --|> type.
+	annotationType --|> #TAnnotationType.
+	annotationType --|> #TWithAttributes.
+	annotationType --|> #TWithInheritances.
 ]
 
 { #category : #definition }

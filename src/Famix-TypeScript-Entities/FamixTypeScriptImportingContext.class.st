@@ -17,6 +17,18 @@ FamixTypeScriptImportingContext >> importAccess [
 ]
 
 { #category : #testing }
+FamixTypeScriptImportingContext >> importAnnotationInstance [
+	<generated>
+	^ self import: FamixTypeScriptAnnotationInstance
+]
+
+{ #category : #testing }
+FamixTypeScriptImportingContext >> importAnnotationType [
+	<generated>
+	^ self import: FamixTypeScriptAnnotationType
+]
+
+{ #category : #testing }
 FamixTypeScriptImportingContext >> importAttribute [
 	<generated>
 	^ self import: FamixTypeScriptAttribute
@@ -224,6 +236,18 @@ FamixTypeScriptImportingContext >> shouldImportAbstractFileAnchor [
 FamixTypeScriptImportingContext >> shouldImportAccess [
 	<generated>
 	^ self shouldImport: FamixTypeScriptAccess
+]
+
+{ #category : #testing }
+FamixTypeScriptImportingContext >> shouldImportAnnotationInstance [
+	<generated>
+	^ self shouldImport: FamixTypeScriptAnnotationInstance
+]
+
+{ #category : #testing }
+FamixTypeScriptImportingContext >> shouldImportAnnotationType [
+	<generated>
+	^ self shouldImport: FamixTypeScriptAnnotationType
 ]
 
 { #category : #testing }
