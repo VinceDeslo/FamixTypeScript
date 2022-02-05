@@ -23,9 +23,21 @@ FamixTypeScriptImportingContext >> importAnnotationInstance [
 ]
 
 { #category : #testing }
+FamixTypeScriptImportingContext >> importAnnotationInstanceAttribute [
+	<generated>
+	^ self import: FamixTypeScriptAnnotationInstanceAttribute
+]
+
+{ #category : #testing }
 FamixTypeScriptImportingContext >> importAnnotationType [
 	<generated>
 	^ self import: FamixTypeScriptAnnotationType
+]
+
+{ #category : #testing }
+FamixTypeScriptImportingContext >> importAnnotationTypeAttribute [
+	<generated>
+	^ self import: FamixTypeScriptAnnotationTypeAttribute
 ]
 
 { #category : #testing }
@@ -245,9 +257,21 @@ FamixTypeScriptImportingContext >> shouldImportAnnotationInstance [
 ]
 
 { #category : #testing }
+FamixTypeScriptImportingContext >> shouldImportAnnotationInstanceAttribute [
+	<generated>
+	^ self shouldImport: FamixTypeScriptAnnotationInstanceAttribute
+]
+
+{ #category : #testing }
 FamixTypeScriptImportingContext >> shouldImportAnnotationType [
 	<generated>
 	^ self shouldImport: FamixTypeScriptAnnotationType
+]
+
+{ #category : #testing }
+FamixTypeScriptImportingContext >> shouldImportAnnotationTypeAttribute [
+	<generated>
+	^ self shouldImport: FamixTypeScriptAnnotationTypeAttribute
 ]
 
 { #category : #testing }

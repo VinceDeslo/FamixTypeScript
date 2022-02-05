@@ -183,6 +183,8 @@ FamixTypeScriptGenerator >> defineClasses [
 	leafEntity := builder newClassNamed: #LeafEntity.
 	annotationType := builder newClassNamed: #AnnotationType.
 	annotationInstance := builder newClassNamed: #AnnotationInstance.
+	annotationInstanceAttribute := builder newClassNamed: #AnnotationInstanceAttribute.
+	annotationTypeAttribute := builder newClassNamed: #AnnotationTypeAttribute.
 	localVariable := builder newClassNamed: #LocalVariable.
 	attribute := builder newClassNamed: #Attribute.
 	inheritance := builder newClassNamed: #Inheritance.
@@ -322,6 +324,15 @@ FamixTypeScriptGenerator >> defineHierarchy [
 	annotationType --|> #TAnnotationType.
 	annotationType --|> #TWithAttributes.
 	annotationType --|> #TWithInheritances.
+	
+	annotationInstanceAttribute --|> sourcedEntity.
+	annotationInstanceAttribute --|> #TAnnotationInstanceAttribute.
+	annotationInstanceAttribute --|> #TTypedAnnotationInstanceAttribute.
+	
+	annotationTypeAttribute --|> namedEntity.
+	annotationTypeAttribute --|> #TAnnotationTypeAttribute.
+	annotationTypeAttribute --|> #TTypedAnnotationInstanceAttribute.
+	
 ]
 
 { #category : #definition }
