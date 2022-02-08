@@ -9,7 +9,7 @@ This version must be loaded in a [Moose 8.0.2 image](https://github.com/moosetec
 
 ```st
 Metacello new
-	githubUser: 'Arezoo-Nasr' project: 'FamixTypeScript' commitish: 'master' path: 'src';
+	githubUser: 'VinceDeslo' project: 'FamixTypeScript' commitish: 'master' path: 'src';
 	baseline: 'FamixTypeScript';
 	load
 ```
