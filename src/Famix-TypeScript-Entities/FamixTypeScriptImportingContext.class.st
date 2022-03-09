@@ -83,6 +83,12 @@ FamixTypeScriptImportingContext >> importCustomSourceLanguage [
 ]
 
 { #category : #testing }
+FamixTypeScriptImportingContext >> importDecorator [
+	<generated>
+	^ self import: FamixTypeScriptDecorator
+]
+
+{ #category : #testing }
 FamixTypeScriptImportingContext >> importEntity [
 	<generated>
 	^ self import: FamixTypeScriptEntity
@@ -314,6 +320,12 @@ FamixTypeScriptImportingContext >> shouldImportContainerEntity [
 FamixTypeScriptImportingContext >> shouldImportCustomSourceLanguage [
 	<generated>
 	^ self shouldImport: FamixTypeScriptCustomSourceLanguage
+]
+
+{ #category : #testing }
+FamixTypeScriptImportingContext >> shouldImportDecorator [
+	<generated>
+	^ self shouldImport: FamixTypeScriptDecorator
 ]
 
 { #category : #testing }

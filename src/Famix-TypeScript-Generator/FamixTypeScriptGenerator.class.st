@@ -64,7 +64,10 @@ Class {
 		'tCanBeVolatile',
 		'tCanBeSynchronized',
 		'tCanBeTransient',
-		'tCanBeInterface'
+		'tCanBeInterface',
+		'decorator',
+		'tCanBeFactory',
+		'tdecoratorType'
 	],
 	#category : #'Famix-TypeScript-Generator'
 }
@@ -189,6 +192,7 @@ FamixTypeScriptGenerator >> defineClasses [
 	attribute := builder newClassNamed: #Attribute.
 	inheritance := builder newClassNamed: #Inheritance.
 	function := builder newClassNamed: #Function.
+	decorator := builder newClassNamed: #Decorator 
 ]
 
 { #category : #definition }
@@ -333,6 +337,11 @@ FamixTypeScriptGenerator >> defineHierarchy [
 	annotationTypeAttribute --|> #TAnnotationTypeAttribute.
 	annotationTypeAttribute --|> #TTypedAnnotationInstanceAttribute.
 	
+	decorator --|> function.
+	decorator --|> tCanBeFactory.
+	decorator --|> tdecoratorType.
+	decorator --|> #TDefinedInModule.
+	
 ]
 
 { #category : #definition }
@@ -347,6 +356,10 @@ super defineProperties.
 			
 	((tCanBeInterface property: #isInterface type: #Boolean) 
 		comment: 'Entity can be an abstraction representing an implementationless interface (language dependent)').
+	((tCanBeFactory property: #isFactory type: #Boolean) 
+		comment: 'Decorator can be an Factory)').
+	((tdecoratorType property: #decoratorType type: #String) 
+		comment: 'Decorator can be an Factory)').
 
 ]
 
@@ -357,7 +370,9 @@ FamixTypeScriptGenerator >> defineTraits [
 	tCanBeTransient := builder newTraitNamed: #TCanBeTransient comment: self commentForTCanBeTransient.
 	tCanBeSynchronized := builder newTraitNamed: #TCanBeSynchronized comment: self commentForTCanBeSynchronized.
 	
-	tCanBeInterface := builder newTraitNamed: #TCanBeInterface comment: self commentForTCanBeInterface
+	tCanBeInterface := builder newTraitNamed: #TCanBeInterface comment: self commentForTCanBeInterface.
+	tCanBeFactory := builder newTraitNamed: #TCanBeFactory.
+	tdecoratorType := builder newTraitNamed: #TdecoratorType.
 ]
 
 { #category : #definition }
