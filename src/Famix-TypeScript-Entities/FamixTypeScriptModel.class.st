@@ -16,3 +16,9 @@ FamixTypeScriptModel class >> annotation [
 	<package: #FamixTypeScript>
 	<generated>
 ]
+
+{ #category : #'as yet unclassified' }
+FamixTypeScriptModel >> allDecorator [
+	<navigation: 'All Decorator'>
+	^ self allUsing: FamixTypeScriptTdecoratorType
+]
