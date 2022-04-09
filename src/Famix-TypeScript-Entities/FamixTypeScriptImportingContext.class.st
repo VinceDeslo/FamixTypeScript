@@ -17,6 +17,30 @@ FamixTypeScriptImportingContext >> importAccess [
 ]
 
 { #category : #testing }
+FamixTypeScriptImportingContext >> importAnnotationInstance [
+	<generated>
+	^ self import: FamixTypeScriptAnnotationInstance
+]
+
+{ #category : #testing }
+FamixTypeScriptImportingContext >> importAnnotationInstanceAttribute [
+	<generated>
+	^ self import: FamixTypeScriptAnnotationInstanceAttribute
+]
+
+{ #category : #testing }
+FamixTypeScriptImportingContext >> importAnnotationType [
+	<generated>
+	^ self import: FamixTypeScriptAnnotationType
+]
+
+{ #category : #testing }
+FamixTypeScriptImportingContext >> importAnnotationTypeAttribute [
+	<generated>
+	^ self import: FamixTypeScriptAnnotationTypeAttribute
+]
+
+{ #category : #testing }
 FamixTypeScriptImportingContext >> importAttribute [
 	<generated>
 	^ self import: FamixTypeScriptAttribute
@@ -56,6 +80,12 @@ FamixTypeScriptImportingContext >> importContainerEntity [
 FamixTypeScriptImportingContext >> importCustomSourceLanguage [
 	<generated>
 	^ self import: FamixTypeScriptCustomSourceLanguage
+]
+
+{ #category : #testing }
+FamixTypeScriptImportingContext >> importDecorator [
+	<generated>
+	^ self import: FamixTypeScriptDecorator
 ]
 
 { #category : #testing }
@@ -227,6 +257,30 @@ FamixTypeScriptImportingContext >> shouldImportAccess [
 ]
 
 { #category : #testing }
+FamixTypeScriptImportingContext >> shouldImportAnnotationInstance [
+	<generated>
+	^ self shouldImport: FamixTypeScriptAnnotationInstance
+]
+
+{ #category : #testing }
+FamixTypeScriptImportingContext >> shouldImportAnnotationInstanceAttribute [
+	<generated>
+	^ self shouldImport: FamixTypeScriptAnnotationInstanceAttribute
+]
+
+{ #category : #testing }
+FamixTypeScriptImportingContext >> shouldImportAnnotationType [
+	<generated>
+	^ self shouldImport: FamixTypeScriptAnnotationType
+]
+
+{ #category : #testing }
+FamixTypeScriptImportingContext >> shouldImportAnnotationTypeAttribute [
+	<generated>
+	^ self shouldImport: FamixTypeScriptAnnotationTypeAttribute
+]
+
+{ #category : #testing }
 FamixTypeScriptImportingContext >> shouldImportAttribute [
 	<generated>
 	^ self shouldImport: FamixTypeScriptAttribute
@@ -266,6 +320,12 @@ FamixTypeScriptImportingContext >> shouldImportContainerEntity [
 FamixTypeScriptImportingContext >> shouldImportCustomSourceLanguage [
 	<generated>
 	^ self shouldImport: FamixTypeScriptCustomSourceLanguage
+]
+
+{ #category : #testing }
+FamixTypeScriptImportingContext >> shouldImportDecorator [
+	<generated>
+	^ self shouldImport: FamixTypeScriptDecorator
 ]
 
 { #category : #testing }

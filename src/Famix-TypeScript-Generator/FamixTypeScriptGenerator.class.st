@@ -64,7 +64,10 @@ Class {
 		'tCanBeVolatile',
 		'tCanBeSynchronized',
 		'tCanBeTransient',
-		'tCanBeInterface'
+		'tCanBeInterface',
+		'decorator',
+		'tCanBeFactory',
+		'tdecoratorType'
 	],
 	#category : #'Famix-TypeScript-Generator'
 }
@@ -181,11 +184,15 @@ FamixTypeScriptGenerator >> defineClasses [
 	parameterizedType := builder newClassNamed: #ParameterizedType.
 	structuralEntity := builder newClassNamed: #StructuralEntity.
 	leafEntity := builder newClassNamed: #LeafEntity.
-	
+	annotationType := builder newClassNamed: #AnnotationType.
+	annotationInstance := builder newClassNamed: #AnnotationInstance.
+	annotationInstanceAttribute := builder newClassNamed: #AnnotationInstanceAttribute.
+	annotationTypeAttribute := builder newClassNamed: #AnnotationTypeAttribute.
 	localVariable := builder newClassNamed: #LocalVariable.
 	attribute := builder newClassNamed: #Attribute.
 	inheritance := builder newClassNamed: #Inheritance.
 	function := builder newClassNamed: #Function.
+	decorator := builder newClassNamed: #Decorator 
 ]
 
 { #category : #definition }
@@ -311,6 +318,30 @@ FamixTypeScriptGenerator >> defineHierarchy [
 	function --|> #TDefinedInModule.
 
 	inheritance --|> #TInheritance.
+	
+	annotationInstance --|> sourcedEntity.
+	annotationInstance --|> #TAnnotationInstance.
+	annotationInstance --|> #TWithAnnotationInstanceAttributes.
+	annotationInstance --|> #TTypedAnnotationInstance.
+	
+	annotationType --|> type.
+	annotationType --|> #TAnnotationType.
+	annotationType --|> #TWithAttributes.
+	annotationType --|> #TWithInheritances.
+	
+	annotationInstanceAttribute --|> sourcedEntity.
+	annotationInstanceAttribute --|> #TAnnotationInstanceAttribute.
+	annotationInstanceAttribute --|> #TTypedAnnotationInstanceAttribute.
+	
+	annotationTypeAttribute --|> namedEntity.
+	annotationTypeAttribute --|> #TAnnotationTypeAttribute.
+	annotationTypeAttribute --|> #TTypedAnnotationInstanceAttribute.
+	
+	decorator --|> function.
+	decorator --|> tCanBeFactory.
+	decorator --|> tdecoratorType.
+	decorator --|> #TDefinedInModule.
+	
 ]
 
 { #category : #definition }
@@ -325,6 +356,10 @@ super defineProperties.
 			
 	((tCanBeInterface property: #isInterface type: #Boolean) 
 		comment: 'Entity can be an abstraction representing an implementationless interface (language dependent)').
+	((tCanBeFactory property: #isFactory type: #Boolean) 
+		comment: 'Decorator can be an Factory)').
+	((tdecoratorType property: #decoratorType type: #String) 
+		comment: 'Decorator can be an Factory)').
 
 ]
 
@@ -335,7 +370,9 @@ FamixTypeScriptGenerator >> defineTraits [
 	tCanBeTransient := builder newTraitNamed: #TCanBeTransient comment: self commentForTCanBeTransient.
 	tCanBeSynchronized := builder newTraitNamed: #TCanBeSynchronized comment: self commentForTCanBeSynchronized.
 	
-	tCanBeInterface := builder newTraitNamed: #TCanBeInterface comment: self commentForTCanBeInterface
+	tCanBeInterface := builder newTraitNamed: #TCanBeInterface comment: self commentForTCanBeInterface.
+	tCanBeFactory := builder newTraitNamed: #TCanBeFactory.
+	tdecoratorType := builder newTraitNamed: #TdecoratorType.
 ]
 
 { #category : #definition }
