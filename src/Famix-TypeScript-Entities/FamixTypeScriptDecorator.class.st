@@ -1,8 +1,11 @@
+"
+The package that contains this class
+"
 Class {
 	#name : #FamixTypeScriptDecorator,
 	#superclass : #FamixTypeScriptFunction,
-	#traits : 'FamixTDefinedInModule + FamixTypeScriptTCanBeFactory + FamixTypeScriptTdecoratorType',
-	#classTraits : 'FamixTDefinedInModule classTrait + FamixTypeScriptTCanBeFactory classTrait + FamixTypeScriptTdecoratorType classTrait',
+	#traits : 'FamixTDefinedInModule + FamixTypeScriptTCanBeFactory + FamixTypeScriptTdecoratedEntity + FamixTypeScriptTdecoratorType',
+	#classTraits : 'FamixTDefinedInModule classTrait + FamixTypeScriptTCanBeFactory classTrait + FamixTypeScriptTdecoratedEntity classTrait + FamixTypeScriptTdecoratorType classTrait',
 	#category : #'Famix-TypeScript-Entities-Entities'
 }
 

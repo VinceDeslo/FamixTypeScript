@@ -67,7 +67,8 @@ Class {
 		'tCanBeInterface',
 		'decorator',
 		'tCanBeFactory',
-		'tdecoratorType'
+		'tdecoratorType',
+		'tdecoratedEntity'
 	],
 	#category : #'Famix-TypeScript-Generator'
 }
@@ -340,6 +341,7 @@ FamixTypeScriptGenerator >> defineHierarchy [
 	decorator --|> function.
 	decorator --|> tCanBeFactory.
 	decorator --|> tdecoratorType.
+	decorator --|> tdecoratedEntity.
 	decorator --|> #TDefinedInModule.
 	
 ]
@@ -347,19 +349,31 @@ FamixTypeScriptGenerator >> defineHierarchy [
 { #category : #definition }
 FamixTypeScriptGenerator >> defineProperties [
 super defineProperties.
+		
 	((scopingEntity property: #parentScope)
 			comment: 'Parent scope embedding this scope, if any.';
 			container)
 		*-
 	((scopingEntity property: #childScopes)
 			comment: 'Child scopes embedded in this scope, if any.').
-			
+				
 	((tCanBeInterface property: #isInterface type: #Boolean) 
 		comment: 'Entity can be an abstraction representing an implementationless interface (language dependent)').
 	((tCanBeFactory property: #isFactory type: #Boolean) 
 		comment: 'Decorator can be an Factory)').
 	((tdecoratorType property: #decoratorType type: #String) 
 		comment: 'Decorator can be an Factory)').
+		
+	((tdecoratedEntity property: #decoratedEntity type: #Object) 
+		comment: 'Decorator can be an Factory)').
+
+]
+
+{ #category : #definition }
+FamixTypeScriptGenerator >> defineRelations [
+super defineRelations.
+
+
 
 ]
 
@@ -373,6 +387,7 @@ FamixTypeScriptGenerator >> defineTraits [
 	tCanBeInterface := builder newTraitNamed: #TCanBeInterface comment: self commentForTCanBeInterface.
 	tCanBeFactory := builder newTraitNamed: #TCanBeFactory.
 	tdecoratorType := builder newTraitNamed: #TdecoratorType.
+	tdecoratedEntity := builder newTraitNamed: #TdecoratedEntity.
 ]
 
 { #category : #definition }

@@ -1,3 +1,6 @@
+"
+The classes inside the package
+"
 Class {
 	#name : #FamixTypeScriptNamespace,
 	#superclass : #FamixTypeScriptScopingEntity,
