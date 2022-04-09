@@ -342,7 +342,6 @@ FamixTypeScriptGenerator >> defineHierarchy [
 	decorator --|> tCanBeFactory.
 	decorator --|> tdecoratorType.
 	decorator --|> tdecoratedEntity.
-	decorator --|> #TDefinedInModule.
 	
 ]
 
@@ -362,10 +361,10 @@ super defineProperties.
 	((tCanBeFactory property: #isFactory type: #Boolean) 
 		comment: 'Decorator can be an Factory)').
 	((tdecoratorType property: #decoratorType type: #String) 
-		comment: 'Decorator can be an Factory)').
+		comment: 'Decorator Type)').
 		
 	((tdecoratedEntity property: #decoratedEntity type: #Object) 
-		comment: 'Decorator can be an Factory)').
+		comment: 'Entity Decorated)').
 
 ]
 

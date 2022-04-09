@@ -20,7 +20,7 @@ FamixTypeScriptTdecoratedEntity >> decoratedEntity [
 
 	<FMProperty: #decoratedEntity type: #Object>
 	<generated>
-	<FMComment: 'Decorator can be an Factory)'>
+	<FMComment: 'Entity Decorated)'>
 	^ decoratedEntity
 ]
 
