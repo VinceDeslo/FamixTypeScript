@@ -20,7 +20,7 @@ FamixTypeScriptTdecoratorType >> decoratorType [
 
 	<FMProperty: #decoratorType type: #String>
 	<generated>
-	<FMComment: 'Decorator can be an Factory)'>
+	<FMComment: 'Decorator Type)'>
 	^ decoratorType
 ]
 

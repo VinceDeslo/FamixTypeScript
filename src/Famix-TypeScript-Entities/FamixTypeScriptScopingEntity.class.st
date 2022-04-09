@@ -4,8 +4,8 @@ Class {
 	#traits : 'FamixTWithGlobalVariables',
 	#classTraits : 'FamixTWithGlobalVariables classTrait',
 	#instVars : [
-		'#parentScope => FMOne type: #FamixTypeScriptScopingEntity opposite: #childScopes',
-		'#childScopes => FMMany type: #FamixTypeScriptScopingEntity opposite: #parentScope'
+		'#childScopes => FMMany type: #FamixTypeScriptScopingEntity opposite: #parentScope',
+		'#parentScope => FMOne type: #FamixTypeScriptScopingEntity opposite: #childScopes'
 	],
 	#category : #'Famix-TypeScript-Entities-Entities'
 }

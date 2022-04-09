@@ -1,3 +1,6 @@
+"
+The package that contains this class
+"
 Class {
 	#name : #FamixTypeScriptParameter,
 	#superclass : #FamixTypeScriptStructuralEntity,
