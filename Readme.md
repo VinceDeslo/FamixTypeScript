@@ -12,8 +12,9 @@ The additions to the metamodel define what a Decorator is represented as and its
 
 Some changes were brought to add the processing of [TypeScript Decorators](https://www.typescriptlang.org/docs/handbook/decorators.html):
 
-- A new Famix class `FamixTypeScriptDecorator`
-- A new set of traits called `tdecoratorType` and `tCanBeFactory`
+- A new entity `Decorator`
+- A new set of traits called `tdecoratorType`, `tdecoratorType` and `tCanBeFactory`
+- A new method `AllDecorator` to retrieve all Decorators.
 
 ## Loading from a Moose playground
 
